@@ -1,9 +1,9 @@
+// check if user's system settings preference is set to reduced motion
 document.addEventListener("DOMContentLoaded", () => {
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
   ).matches;
 
-  /* landing page: fade out, then go to the rest of the site */
   const enterBtn = document.getElementById("enter-btn");
   if (enterBtn) {
     const enterSite = (event) => {
@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     enterBtn.addEventListener("click", enterSite);
 
-    // pressing Enter anywhere (except on another link/button) also enters
     document.addEventListener("keydown", (event) => {
       if (event.key !== "Enter") return;
       const tag = document.activeElement && document.activeElement.tagName;
@@ -48,8 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     !prefersReducedMotion &&
     "IntersectionObserver" in window
   ) {
-    // Each entry slides in as one single block (from below by default).
-    // alternate: left, right, left, right... (matches the game rows)
+    // Each entry slides in as one single block (alternating left and right sid)
     // closest: animate the nearest matching ancestor of the match instead
     const targets = [
       { selector: ".hero > .container" },
@@ -82,11 +80,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* footer year */
+  // hero video: don't autoplay for people who prefer reduced motion
+  const heroVideo = document.querySelector(".hero-video video");
+  // if (heroVideo && prefersReducedMotion) {
+  //   heroVideo.removeAttribute("autoplay");
+  //   heroVideo.pause();
+  // }
+
+  // footer year
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  /* restore page if user navigates back to it from the bfcache */
+  // restore page if user navigates back to it from the bfcache
   window.addEventListener("pageshow", (event) => {
     if (event.persisted) document.body.classList.remove("leaving");
   });

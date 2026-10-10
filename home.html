@@ -42,11 +42,6 @@
               <li><a href="home.html" class="active">home</a></li>
               <li><a href="home.html#about">about me</a></li>
               <li><a href="home.html#my-games">my games</a></li>
-              <li>
-                <a href="resume.pdf" target="_blank" rel="noopener noreferrer"
-                  >resume</a
-                >
-              </li>
             </ul>
           </div>
           <div class="external">
@@ -78,15 +73,6 @@
                   ><i class="fa-brands fa-youtube"></i
                 ></a>
               </li>
-              <li>
-                <a
-                  href="https://x.com/nbound_"
-                  aria-label="x (twitter)"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="fa-brands fa-x-twitter"></i
-                ></a>
-              </li>
             </ul>
           </div>
         </div>
@@ -95,20 +81,42 @@
 
     <main>
       <section class="hero">
-        <div class="container">
-          <p class="eyebrow">portfolio</p>
-          <h1 class="text-xxl">hey, i'm nate!</h1>
-          <p class="hero-text">
-            i'm a computer science university student focusing on game
-            development. i love to design the architectural code systems that
-            make games run under the hood, express my creativity through the
-            gameplay experiences that i help create and shape, and most
-            importantly, innovate new ways to have fun with gaming.
-          </p>
-          <div class="hero-actions">
-            <a href="home.html#my-games" class="btn btn-primary">
-              <i class="fa-solid fa-gamepad"></i> view my games
-            </a>
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <p class="eyebrow">portfolio</p>
+            <h1 class="text-xxl">hey, i'm nate!</h1>
+            <p class="hero-text">
+              i'm a computer science university student focusing on game
+              development. i love designing the architectural code systems that
+              make games run under the hood, expressing my creativity through
+              the gameplay experiences that i design, and innovating new ways to
+              enjoy games.
+            </p>
+            <div class="hero-actions">
+              <a href="home.html#my-games" class="btn btn-primary">
+                <i class="fa-solid fa-gamepad"></i> view my games
+              </a>
+            </div>
+          </div>
+
+          <!--
+            Looping 4:3 hero video. Put your file at files/hero.mp4 (a .webm
+            version at files/hero.webm is optional). Browsers only autoplay
+            muted videos, so keep it muted. Optional: add poster="images/hero-poster.jpg"
+            to the <video> tag to show a still image while it loads.
+          -->
+          <div class="hero-video" aria-hidden="true">
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="auto"
+              disablepictureinpicture
+              tabindex="-1"
+            >
+              <source src="files/hero.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>
@@ -118,13 +126,12 @@
           <h2 class="section-title">about me</h2>
           <div class="about-grid">
             <div class="about-text">
-              <p>i'm a</p>
               <p>
-                my journey with game development actually started all the way
-                back when i was in the 6th grade, when i used to develop and
-                share games on Scratch. now, i've taken that long-time interest
-                of mine and turned it into an outlet of passion and creativity
-                through my new releases.
+                my journey with game development started back when i was in the
+                6th grade, when i used to develop and share games on Scratch.
+                now, i've taken that long-time interest of mine and turned it
+                into an outlet of passion and creativity through my new
+                releases.
               </p>
               <p>
                 right now, i am interested in and actively seeking internship
@@ -153,17 +160,42 @@
               <h3>quick facts</h3>
               <ul>
                 <li>
-                  <i class="fa-solid fa-graduation-cap"></i> [school / major /
-                  grad year]
+                  <i class="fa-solid fa-code"></i>
+                  <div>
+                    <span class="fact-label">specializations</span>
+                    system architecture design, gameplay programming, game/level
+                    design
+                  </div>
                 </li>
-                <li><i class="fa-solid fa-location-dot"></i> [location]</li>
                 <li>
-                  <i class="fa-solid fa-code"></i> [languages, e.g. C#, C++,
-                  Python]
+                  <i class="fa-solid fa-briefcase"></i>
+                  <div>
+                    <span class="fact-label">experience</span>
+                    1 year godot dev, prev. experience w/ unity, scratch
+                  </div>
                 </li>
                 <li>
-                  <i class="fa-solid fa-cube"></i> [engines / tools, e.g. Unity,
-                  Godot]
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <div>
+                    <span class="fact-label"
+                      >major &amp; expected graduation</span
+                    >
+                    computer science &middot; spring 2027
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-gamepad"></i>
+                  <div>
+                    <span class="fact-label">favorite game genres</span>
+                    rhythm, fps, platform fighter, puzzle
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-heart"></i>
+                  <div>
+                    <span class="fact-label">hobbies</span>
+                    gaming, video editing, watching anime
+                  </div>
                 </li>
               </ul>
             </aside>
@@ -185,15 +217,15 @@
           </p>
         </div>
         <div class="container">
-          <!--
-      One game per row. Rows alternate automatically: image on the left for
-      odd games, on the right for even games. Add a game by copying one
-      <article> block; the alternation follows the order.
-    -->
           <div class="game-list">
             <article class="card game-card">
               <div class="game-thumb">
-                <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+                <video
+                  src="files/post-decrement.mp4"
+                  autoplay
+                  playsinline
+                  loop
+                ></video>
               </div>
               <div class="game-body">
                 <div class="game-header">
@@ -201,13 +233,12 @@
                   <time class="game-date" datetime="2026-07">july 2026</time>
                 </div>
                 <p class="game-role">
-                  programmer &middot; puzzle/level designer &middot; artist
+                  programmer &middot; game designer &middot; artist
                 </p>
                 <ul class="tag-list tag-list-sm">
                   <li class="tag">puzzle platformer</li>
-                  <li class="tag">simple aesthetic</li>
                   <li class="tag tag-award">
-                    <i class="fa-solid fa-trophy"></i> top 1% at GMTK Game Jam
+                    <i class="fa-solid fa-trophy"></i> top 1% in GMTK Game Jam
                     2026
                   </li>
                 </ul>
@@ -216,19 +247,26 @@
                   must solve multiple times with limited jumps. every time you
                   loop, you lose a jump.
                 </p>
+                <p class="game-desc">
+                  i-- placed <strong>#88 for enjoyment</strong> and
+                  <strong>#118 for creativity </strong>out of
+                  <strong>10,500+ entries</strong> in the GMTK Game Jam 2026,
+                  with 70 ratings!
+                </p>
                 <h4 class="game-subtitle">my contributions</h4>
                 <ul class="contrib-list">
                   <li>
-                    programmed the core gameplay systems and mechanics for a
-                    responsive platformer experience
+                    programmed all of the core gameplay systems and mechanics
+                    for a responsive puzzle platformer experience
                   </li>
                   <li>
                     designed 13 puzzles that teach central mechanics and build
-                    on them in an intentional progression scaling
+                    on them in an intentionally crafted progression of
+                    difficulty
                   </li>
                   <li>
-                    directed and created a minimalistic visual design and art
-                    style for a simple, effective look
+                    directed and created a minimalistic art style for a simple,
+                    charming visual design
                   </li>
                 </ul>
                 <a
@@ -244,7 +282,12 @@
 
             <article class="card game-card">
               <div class="game-thumb">
-                <i class="fa-solid fa-khanda" aria-hidden="true"></i>
+                <video
+                  src="files/lethal-promenade.mp4"
+                  autoplay
+                  playsinline
+                  loop
+                ></video>
               </div>
               <div class="game-body">
                 <div class="game-header">
@@ -252,13 +295,13 @@
                   <time class="game-date" datetime="2026-06">june 2026</time>
                 </div>
                 <p class="game-role">
-                  Programmer &middot; Game Designer &middot; Combat Designer
-                  &middot; VFX
+                  programmer &middot; game designer &middot; VFX
                 </p>
                 <ul class="tag-list tag-list-sm">
                   <li class="tag">action</li>
                   <li class="tag">combat-focused</li>
                   <li class="tag">wave survival</li>
+                  <li class="tag">1-week game jam</li>
                 </ul>
                 <p class="game-desc">
                   you are an android tasked with culling hordes of corrupted
@@ -271,7 +314,8 @@
                 <h4 class="game-subtitle">my contributions</h4>
                 <ul class="contrib-list">
                   <li>
-                    developed the combat systems and interactive mechanics
+                    developed all game systems, including combat, level
+                    progression, enemy spawns, and upgrades
                   </li>
                   <li>
                     designed difficulty scaling across enemy encounters, combat
@@ -295,7 +339,7 @@
 
             <article class="card game-card">
               <div class="game-thumb">
-                <i class="fa-solid fa-treasure-chest" aria-hidden="true"></i>
+                <video src="files/loots.mp4" autoplay playsinline loop></video>
               </div>
               <div class="game-body">
                 <div class="game-header">
@@ -303,11 +347,11 @@
                   <time class="game-date" datetime="2026-04">april 2026</time>
                 </div>
                 <p class="game-role">
-                  Programmer &middot; Game Designer &middot; Composer
+                  programmer &middot; game designer &middot; composer
                 </p>
                 <ul class="tag-list tag-list-sm">
                   <li class="tag">action rpg</li>
-                  <li class="tag">procedural generation</li>
+                  <li class="tag">2-week game jam</li>
                 </ul>
                 <p class="game-desc">
                   a bite-sized action RPG where you play as a dungeon-diving
@@ -323,8 +367,8 @@
                     environments
                   </li>
                   <li>
-                    designed the combat and itemization mechanics, with an
-                    emphasis on player expression
+                    designed the combat and itemization systems with an emphasis
+                    on player expression
                   </li>
                   <li>
                     composed and implemented music to support the atmosphere and
@@ -344,7 +388,12 @@
 
             <article class="card game-card">
               <div class="game-thumb">
-                <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                <video
+                  src="files/light-screening.mp4"
+                  autoplay
+                  playsinline
+                  loop
+                ></video>
               </div>
               <div class="game-body">
                 <div class="game-header">
@@ -352,24 +401,26 @@
                   <time class="game-date" datetime="2026-01">january 2026</time>
                 </div>
                 <p class="game-role">
-                  Programmer &middot; Level Designer &middot; Composer/Sound
-                  Designer
+                  programmer &middot; level designer &middot; composer/sound
+                  designer
                 </p>
                 <ul class="tag-list tag-list-sm">
                   <li class="tag">platformer</li>
-                  <li class="tag">godot</li>
+                  <li class="tag">3-day game jam</li>
                 </ul>
                 <p class="game-desc">
-                  a platformer built in Godot in three days, with a color theory
-                  gimmick at its core.
+                  a tricky platformer that tests your understanding of light
+                  color theory. when you change the lights, you change what
+                  platforms you can interact with. if the light passes through
+                  it, so can you.
                 </p>
                 <h4 class="game-subtitle">my contributions</h4>
                 <ul class="contrib-list">
-                  <li>developed the full platformer in Godot in three days</li>
                   <li>
-                    designed levels with creative uses of the interactive
-                    mechanics to challenge players
+                    designed levels with creative uses of the light switching
+                    mechanic to challenge players
                   </li>
+                  <li>implemented responsive platformer mechanics</li>
                   <li>
                     handled sound design and composed the background music
                   </li>
@@ -392,7 +443,7 @@
         <div class="container">
           <h2 class="section-title">get in touch</h2>
           <p class="contact-text">
-            if you're interested in collaborations or reaching out, email me at
+            for work-related opportunities, you can reach me at
             <a href="mailto:nathanielfadrigon@gmail.com"
               >nathanielfadrigon@gmail.com</a
             >.
